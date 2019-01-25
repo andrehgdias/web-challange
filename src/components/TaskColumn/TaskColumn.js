@@ -14,7 +14,7 @@ class TaskColumn extends React.Component{
                         {this.props.title}        
                     </div>
 
-                    { this.props.title == "Disponível" &&
+                    {this.props.title == "Disponível" &&
                         <button className="btn btn-primary">Nova Tarefa</button>
                     }
                 </div>
