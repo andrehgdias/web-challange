@@ -1,4 +1,5 @@
 import React from 'react';
+import './TaskColumn.css';
 
 class TaskColumn extends React.Component{
     state = {
@@ -7,8 +8,16 @@ class TaskColumn extends React.Component{
 
     render(){
         return (
-            <div className="col col-md-3">
-                <h1>{this.props.title}</h1>
+            <div className="col col-md-">
+                <div className="card">
+                    <div className="card-header">
+                        {this.props.title}        
+                    </div>
+
+                    { this.props.title == "Disponível" &&
+                        <button className="btn btn-primary">Nova Tarefa</button>
+                    }
+                </div>
             </div>
         );
     }
