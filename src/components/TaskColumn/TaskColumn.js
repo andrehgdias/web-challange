@@ -12,7 +12,8 @@ class TaskColumn extends React.Component{
                 'Cliente':"Jeferson",
                 'Descricao':"Descrição básica para testes",
                 'DataPedido': "26/01/2019",
-                'Entrega': "29/01/2019"
+                'DataEntrega': "29/01/2019",
+                'Estado': 0 // 0 = Disponível
             }
         ]
     };
@@ -20,7 +21,6 @@ class TaskColumn extends React.Component{
     newTask = () => {
 
         const form = document.getElementById('formTarefa');
-        const botaoConfirmar = document.getElementById('formTarefa');
         
         var formValido = true;
 
@@ -33,19 +33,22 @@ class TaskColumn extends React.Component{
         }
         if(formValido){
             console.warn("New Task Baby!!!");
-            console.log(this.state.tasks);
             var novaTarefa  = {
                 'Titulo': "teste",
                 'Modelo': document.getElementById('modelo').value,
                 'Cliente':document.getElementById('nomeCliente').value,
                 'Descricao':document.getElementById('descricao').value,
                 'DataPedido': document.getElementById('criacao').value,
-                'Entrega': document.getElementById('entrega').value
+                'DataEntrega': document.getElementById('entrega').value,
+                'Estado': 0
             }
+
+            var state = this.state.tasks;
+            state.push(novaTarefa);
 
             this.setState(
                 {
-                    tasks: {...this.state.tasks.push(novaTarefa)}
+                    tasks: state
                 }
             );
 
