@@ -1,18 +1,13 @@
 import React from 'react';
 import './TaskColumn.css';
 
-<<<<<<< HEAD
 import BtnNewTask from '../BtnNewTask/BtnNewTask';
-
-=======
-import BtnNewTask from '../BtnNewTask/BtnNewTask'
->>>>>>> 335adc19fc67783939d726b9181569ad6d7145e8
 
 class TaskColumn extends React.Component{
     state = {
         tasks: [
             {
-                'Título': "Primeira",
+                'Título': "(Jeferson)Lenovo Ideapad 310",
                 'Modelo':"Lenovo Ideapad 310",
                 'Cliente':"Jeferson",
                 'Descrição':"Descrição básica para testes",
