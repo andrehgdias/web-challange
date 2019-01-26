@@ -3,3 +3,19 @@
     color: #ffffff;
     text-align: center;
 }
+
+.card-body{
+    padding: 0 0;
+}
+
+.task {
+    margin-top: 10px;
+    padding: 0px 20px;
+    display: inline-block;
+    width: 100%;
+    border-bottom:1px solid  #ddd;
+}
+
+.task h2 {
+    font-size: 16px;
+}

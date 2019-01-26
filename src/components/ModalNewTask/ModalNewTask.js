@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ModalNewTask = (props) => (
-    <div>
+    
         <div className="modal fade" id="modalNewTask" tabIndex="-1" role="dialog" aria-labelledby="modalNewTask" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content">
@@ -63,7 +63,7 @@ const ModalNewTask = (props) => (
                 </div>
             </div>
         </div>
-    </div>
+    
 );
 
 export default ModalNewTask;

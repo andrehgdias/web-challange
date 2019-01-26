@@ -56,7 +56,6 @@ class TaskColumn extends React.Component{
         }
     }
 
-
     render(){
         return (
             <div className="col col-md-4">
@@ -64,7 +63,21 @@ class TaskColumn extends React.Component{
                     <div className="card-header">
                         {this.props.title}        
                     </div>
-
+                    {this.state.tasks.length > 0 &&
+                        <div className="card-body">
+                            {
+                                this.state.tasks.map(
+                                    (task) => {
+                                        return (
+                                            <div className="task">
+                                                <h2 class="card-title text-muted">{`(${task.Cliente}) ${task.Modelo}`}</h2>
+                                            </div>                    
+                                        );
+                                    }
+                                )
+                            }
+                        </div>
+                    }
                     {this.props.title === "Disponível" &&
                         <BtnNewTask newTask={this.newTask}/>
                     }
