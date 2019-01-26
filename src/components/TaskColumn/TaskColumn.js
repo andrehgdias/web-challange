@@ -1,8 +1,12 @@
 import React from 'react';
 import './TaskColumn.css';
 
+<<<<<<< HEAD
 import BtnNewTask from '../BtnNewTask/BtnNewTask';
 
+=======
+import BtnNewTask from '../BtnNewTask/BtnNewTask'
+>>>>>>> 335adc19fc67783939d726b9181569ad6d7145e8
 
 class TaskColumn extends React.Component{
     state = {
