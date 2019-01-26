@@ -1,7 +1,8 @@
 import React from 'react';
 import './TaskColumn.css';
 
-import BtnNewTask from '../BtnNewTask/BtnNewTask'
+import BtnNewTask from '../BtnNewTask/BtnNewTask';
+
 
 class TaskColumn extends React.Component{
     state = {
@@ -29,9 +30,10 @@ class TaskColumn extends React.Component{
                     </div>
 
                     {this.props.title === "Disponível" &&
-                        <BtnNewTask callModal={this.newTask}/>
+                        <BtnNewTask newTask={this.newTask}/>
                     }
                 </div>
+
             </div>
         );
     };
