@@ -1,7 +1,16 @@
+.card {
+    border: none;
+}
+
 .card-header {
     background-color: #101050;
     color: #ffffff;
     text-align: center;
+}
+
+button {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
 }
 
 .card-body{
@@ -9,11 +18,12 @@
 }
 
 .task {
-    margin-top: 10px;
     padding: 0px 20px;
+    padding-top: 10px;
     display: inline-block;
     width: 100%;
     border-bottom:1px solid  #ddd;
+    background-color: #eee;
 }
 
 .task h2 {

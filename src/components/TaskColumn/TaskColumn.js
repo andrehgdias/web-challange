@@ -6,15 +6,15 @@ import BtnNewTask from '../BtnNewTask/BtnNewTask';
 class TaskColumn extends React.Component{
     state = {
         tasks: [
-            {
-                'Titulo': "(Jeferson)Lenovo Ideapad 310",
-                'Modelo':"Lenovo Ideapad 310",
-                'Cliente':"Jeferson",
-                'Descricao':"Descrição básica para testes",
-                'DataPedido': "26/01/2019",
-                'DataEntrega': "29/01/2019",
-                'Estado': 0 // 0 = Disponível
-            }
+            // {
+            //     'Titulo': "(Jeferson)Lenovo Ideapad 310",
+            //     'Modelo':"Lenovo Ideapad 310",
+            //     'Cliente':"Jeferson",
+            //     'Descricao':"Descrição básica para testes",
+            //     'DataPedido': "26/01/2019",
+            //     'DataEntrega': "29/01/2019",
+            //     'Estado': 0 // 0 = Disponível
+            // }
         ]
     };
 
@@ -34,7 +34,7 @@ class TaskColumn extends React.Component{
         if(formValido){
             console.warn("New Task Baby!!!");
             var novaTarefa  = {
-                'Titulo': "teste",
+                'Titulo': `(${document.getElementById('nomeCliente').value}) ${document.getElementById('modelo').value}`,
                 'Modelo': document.getElementById('modelo').value,
                 'Cliente':document.getElementById('nomeCliente').value,
                 'Descricao':document.getElementById('descricao').value,
@@ -70,7 +70,7 @@ class TaskColumn extends React.Component{
                                     (task) => {
                                         return (
                                             <div className="task">
-                                                <h2 class="card-title text-muted">{`(${task.Cliente}) ${task.Modelo}`}</h2>
+                                                <h2 class="card-title text-muted">{task.Titulo}</h2>
                                             </div>                    
                                         );
                                     }
