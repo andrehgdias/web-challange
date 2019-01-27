@@ -1,8 +1,18 @@
 import React from 'react';
 
+import './ModalNewTask.css';
+
 const ModalNewTask = (props) => (
     
         <div className="modal fade" id="modalNewTask" tabIndex="-1" role="dialog" aria-labelledby="modalNewTask" aria-hidden="true">
+            
+            <div className="alert alert-warning fade" id="erroPreenchimento" role="alert">
+                Preencha <strong>todos</strong> os campos!
+                <button type="button" class="close" aria-label="Close" onClick={()=>{document.getElementById('erroPreenchimento').classList.remove('show');}}>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
             <div className="modal-dialog modal-dialog-centered" role="document">
                 <div className="modal-content">
 

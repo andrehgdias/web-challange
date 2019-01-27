@@ -22,7 +22,6 @@ button {
     padding-top: 10px;
     display: inline-block;
     width: 100%;
-    border-bottom:1px solid  #ddd;
     background-color: #eee;
     cursor: pointer;
 }

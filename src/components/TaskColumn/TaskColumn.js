@@ -4,6 +4,7 @@ import './TaskColumn.css';
 import $ from 'jquery';
 
 import BtnNewTask from '../BtnNewTask/BtnNewTask';
+import { delay } from 'q';
 
 class TaskColumn extends React.Component{
     state = {
@@ -28,14 +29,12 @@ class TaskColumn extends React.Component{
 
         for(var i=0; i < form.elements.length; i++){
             if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
-                alert('Preencha todos os campos!');
                 formValido = false;
-                // $('#formTarefa').modal('show');
                 break;
             }
         }
+
         if(formValido){
-            console.warn("New Task Baby!!!");
             var novaTarefa  = {
                 'Titulo': `(${document.getElementById('nomeCliente').value}) ${document.getElementById('modelo').value}`,
                 'Modelo': document.getElementById('modelo').value,
@@ -57,7 +56,13 @@ class TaskColumn extends React.Component{
 
             console.log(this.state.tasks);
             $('#modalNewTask').modal('hide');
-            console.warn('hiding modal');
+        }else{
+
+            // Mostrar mensagem de erro
+            $('#erroPreenchimento').addClass('show');
+            window.setTimeout(()=>{
+                document.getElementById('erroPreenchimento').classList.remove('show');
+            }, 2000);
         }
     }
 
@@ -74,7 +79,7 @@ class TaskColumn extends React.Component{
                                 this.state.tasks.map(
                                     (task, i) => {
                                         return (
-                                            <div className="task" key={i}>
+                                            <div className="task border-bottom" key={i}>
                                                 <h2 className="card-title text-muted">{task.Titulo}</h2>
                                             </div>                    
                                         );
@@ -83,6 +88,7 @@ class TaskColumn extends React.Component{
                             }
                         </div>
                     }
+
                     {this.props.title === "Disponível" &&
                         <BtnNewTask newTask={this.newTask}/>
                     }
