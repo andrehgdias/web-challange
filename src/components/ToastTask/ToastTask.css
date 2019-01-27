@@ -1,0 +1,9 @@
+.task {
+
+    cursor: pointer;
+}
+
+.task.toast{
+    background-color: #eee;
+    margin: 0;
+}
