@@ -1,7 +1,7 @@
 .alert {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2vh;
+    right: 2vh;
 }
 .alert span{
     padding-left: 10px;
