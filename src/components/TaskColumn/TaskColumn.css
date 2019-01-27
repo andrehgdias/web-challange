@@ -24,6 +24,7 @@ button {
     width: 100%;
     border-bottom:1px solid  #ddd;
     background-color: #eee;
+    cursor: pointer;
 }
 
 .task h2 {
