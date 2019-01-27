@@ -18,14 +18,11 @@ button {
 }
 
 .task {
-    padding: 0px 20px;
-    padding-top: 10px;
-    display: inline-block;
-    width: 100%;
-    background-color: #eee;
+
     cursor: pointer;
 }
 
-.task h2 {
-    font-size: 16px;
+.task.toast{
+    background-color: #eee;
+    margin: 0;
 }
