@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ModalNewTask from '../ModalNewTask/ModalNewTask';
 
 const BtnNewTask = props => {

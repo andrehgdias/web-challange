@@ -1,9 +1,8 @@
 import React from 'react';
 import './TaskColumn.css';
-
 import $ from 'jquery';
-
 import BtnNewTask from '../BtnNewTask/BtnNewTask';
+import ToastTask from '../ToastTask/ToastTask';
 
 class TaskColumn extends React.Component{
     state = {
@@ -72,19 +71,7 @@ class TaskColumn extends React.Component{
                                 this.state.tasks.map(
                                     (task, i) => {
                                         return (
-                                            // <div className="task border-bottom" key={i}>
-                                            //     <h2 className="card-title text-muted">{task.Titulo}</h2>
-                                            // </div>
-                                            <div class="task toast show" aria-live="assertive" aria-atomic="true">
-                                                <div class="toast-header">
-                                                    <span class="badge badge-primary">#{i}</span>
-                                                    <strong class="mr-auto">&nbsp;&nbsp;{task.Modelo}</strong>
-                                                    <small>Recebido: {task.DataPedido}</small>
-                                                </div>
-                                                <div class="toast-body">
-                                                    <strong>Cliente:</strong> {task.Cliente} &nbsp;&nbsp;<strong>Entregar em:</strong> <span className="text-muted">{task.DataEntrega}</span>
-                                                </div>
-                                                </div>                
+                                            <ToastTask task={task} i={i}/>                
                                         );
                                     }
                                 )

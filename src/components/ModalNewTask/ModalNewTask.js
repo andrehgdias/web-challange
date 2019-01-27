@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './ModalNewTask.css';
 
 const ModalNewTask = (props) => (

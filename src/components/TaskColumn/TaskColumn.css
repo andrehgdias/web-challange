@@ -16,13 +16,3 @@ button {
 .card-body{
     padding: 0 0;
 }
-
-.task {
-
-    cursor: pointer;
-}
-
-.task.toast{
-    background-color: #eee;
-    margin: 0;
-}
