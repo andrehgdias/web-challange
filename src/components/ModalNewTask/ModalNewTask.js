@@ -57,7 +57,7 @@ const ModalNewTask = (props) => (
 
                     <div className="modal-footer">
                         <button type="button" className="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                        <button type="button" className="btn btn-success" id="botaoConfirmar" onClick={props.newTask} data-dismiss="modal">Confirmar</button>
+                        <button type="button" className="btn btn-success" id="botaoConfirmar" onClick={props.newTask}>Confirmar</button>
                     </div>
 
                 </div>

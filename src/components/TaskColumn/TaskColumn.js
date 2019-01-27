@@ -1,6 +1,8 @@
 import React from 'react';
 import './TaskColumn.css';
 
+import $ from 'jquery';
+
 import BtnNewTask from '../BtnNewTask/BtnNewTask';
 
 class TaskColumn extends React.Component{
@@ -26,8 +28,9 @@ class TaskColumn extends React.Component{
 
         for(var i=0; i < form.elements.length; i++){
             if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
-                console.warn('Preencha todos os campos!');
+                alert('Preencha todos os campos!');
                 formValido = false;
+                // $('#formTarefa').modal('show');
                 break;
             }
         }
@@ -53,6 +56,8 @@ class TaskColumn extends React.Component{
             );
 
             console.log(this.state.tasks);
+            $('#modalNewTask').modal('hide');
+            console.warn('hiding modal');
         }
     }
 
@@ -67,10 +72,10 @@ class TaskColumn extends React.Component{
                         <div className="card-body">
                             {
                                 this.state.tasks.map(
-                                    (task) => {
+                                    (task, i) => {
                                         return (
-                                            <div className="task">
-                                                <h2 class="card-title text-muted">{task.Titulo}</h2>
+                                            <div className="task" key={i}>
+                                                <h2 className="card-title text-muted">{task.Titulo}</h2>
                                             </div>                    
                                         );
                                     }
